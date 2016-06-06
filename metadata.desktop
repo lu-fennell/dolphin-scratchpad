@@ -1,14 +1,14 @@
 [Desktop Entry]
-Name=Shimmer
-Comment=Quake/Visor application wrapper
+Name=Dolphin-Scratchpad
+Comment=Toggle visibility of a Dolphin window with a keyboard shortcut. (Similar to XMonad Scratchpads and the KWin/Script Shimmer)
 
 X-Plasma-API=javascript
 X-Plasma-MainScript=code/main.js
 
-X-KDE-PluginInfo-Author=Jeff Simpson
-X-KDE-PluginInfo-Email=jeff@syncrodoka.net
-X-KDE-PluginInfo-Name=Shimmer
-X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Author=Luminous Fennell
+X-KDE-PluginInfo-Email=lu-fennell@startmail.org
+X-KDE-PluginInfo-Name=Dolphin-Scratchpad
+X-KDE-PluginInfo-Version=0.1
 
 X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL

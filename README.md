@@ -1,23 +1,22 @@
-#Shimmer#
+# dolphin-scratchpad
 
-KDE KWin scipt to provide generic Quake-style terminal support for any app.
+Toggle visibility of a Dolphin window with a keyboard
+shortcut. (Similar to XMonad Scratchpads and the KWin/Script
+[Shimmer](https://github.com/fooblahblah/shimmer)).
 
-Currently, the script is hard-coded for the Terminator app, but any app can be specified
-in content/code/main.js. Once Shimmer is installed the key binding can be changed in the
-Global Shortcuts, KWin section.  Look for "Quake-style app expose".
+Currently its little more than an adaption of
+[Shimmer](https://github.com/fooblahblah/shimmer)
+
 
 
 #Installing#
 
-1. git clone https://github.com/fooblahblah/shimmer.git
-1. cd shimmer
-1. plasmapkg --type kwinscript -i .
-1. Settings, Window Behavior, KWin Scripts. Ensure "Shimmer" is enabled.
+1. in the root of the repo: plasmapkg --type kwinscript -i .
+1. Settings, Window Behavior, KWin Scripts. Ensure "Dolphin-Scratchpad" is enabled.
 1. Logout and login to KDE
-1. Profit
+1. Start a dolphin instance like this
+```
+dolphin --name dolphin-scratchpad
+```
+1. You should be able to assign a global shortcut to toggle the visibility of this dolphin instance
 
-#Issues#
-
-* Minimize app on startup (optional I guess)
-* Add configuration someplace
-* ???
