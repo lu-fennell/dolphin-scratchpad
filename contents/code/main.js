@@ -10,9 +10,9 @@ function hide(client) {
 
 function show(client) {
     setSkip(client, false);
+    client.desktop = workspace.currentDesktop;
     client.minimized = false;
     workspace.activeClient = client;
-    client.desktop = workspace.currentDesktop;
     client.keepAbove       = true;
 }
 
@@ -73,8 +73,20 @@ function toggler(target) {
             } else {
 		hide(c);
             }
-	}); 
+	});
     };
 }
 
+// Register keyboard shortcut
 registerShortcut("ToggleDolphin", "Toggle Dolphin", "Meta-F2", toggler(dolphin));
+// hide the client when it looses focus
+/*
+dolphin.activeChanged.connect(function() {
+    if (dolphin.active) {
+	hide(dolphin);
+    } else {
+	show(dolphin);
+	workspace.activateClient(dolphin);
+    }
+})
+*/

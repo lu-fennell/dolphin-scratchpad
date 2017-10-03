@@ -1,0 +1,15 @@
+* Running debug console
+qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.showInteractiveKWinConsole
+* Installing script
+plasmapkg2 -t kwinscript -i . 
+
+or maybe 
+
+kpackagetool5 -t kwinscript -i .
+* Updating a script
+* TODO Issues [0/4]
+- [ ] plasmapkg2/kpackagetoo5 behave inconsistently: try to install/uninstall
+  and you will see
+- [ ] the kde knowledge base gives the wrong debug console command
+- [ ] console is undocumented
+- [ ] console is awkward to use... how to reload? import files?
