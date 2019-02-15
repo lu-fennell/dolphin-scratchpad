@@ -1,4 +1,3 @@
-// BLABLABLA
 function isHidden(client) {
     return client.minimized;
 }
@@ -25,10 +24,10 @@ function setSkip(client, value) {
 function findFirstTarget(targetName) {
     var clients = workspace.clientList();
     for (var i=0; i<clients.length; i++) {
-	var client = clients[i];
-	if(client.resourceName == targetName) {
-	    return client;
-	}
+	      var client = clients[i];
+	      if(client.resourceName == targetName) {
+	          return client;
+	      }
     }
 };
 
@@ -36,57 +35,33 @@ function TargetClient(targetName) {
     this.id = 'Resource:' + targetName;
     this.cashedClient = findFirstTarget(targetName);
     this.get = function () {
-	// TODO: re-enable caching
-	return findFirstTarget(targetName);
-	// if (!this.cashedClient) {
-	//     print('No client cashed. Searching for client with name ' + targetName);
-	//     this.cashedClient = findFirstTarget(targetName);
-	// }
-	// return this.cashedClient;
+	      return findFirstTarget(targetName);
     };
-    
-    // TODO: re-enable caching
-    // // remove cashedClient when window is closed
-    // var self = this;
-    // workspace.clientRemoved.connect(function (oldClient) {
-    // 	if (self.cashedClient === oldClient) {
-    // 	    self.cashedClient = undefined;
-    // 	}
-    // })
 }
 
 function withTarget(target, cont) {
     var c = target.get();
     if (c) {
-	cont(c);
+	      cont(c);
     } else {
-	print('No client found for target ' + target.id);
+	      print('No client found for target ' + target.id);
     }
 }
 
-var dolphin = new TargetClient('dolphin-scratchpad');
 function toggler(target) {
     return function () {
-	withTarget(target, function (c) {
+	      withTarget(target, function (c) {
             if (isHidden(c)) {
-		show(c);
+		            show(c);
             } else {
-		hide(c);
+		            hide(c);
             }
-	});
+	      });
     };
 }
 
+var dolphin = new TargetClient('dolphin-scratchpad');
+
+
 // Register keyboard shortcut
 registerShortcut("ToggleDolphin", "Toggle Dolphin", "Meta-F2", toggler(dolphin));
-// hide the client when it looses focus
-/*
-dolphin.activeChanged.connect(function() {
-    if (dolphin.active) {
-	hide(dolphin);
-    } else {
-	show(dolphin);
-	workspace.activateClient(dolphin);
-    }
-})
-*/
