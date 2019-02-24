@@ -12,7 +12,11 @@ function show(client) {
     client.desktop = workspace.currentDesktop;
     client.minimized = false;
     workspace.activeClient = client;
-    client.keepAbove       = true;
+    client.keepAbove       = false;
+}
+
+function sayHello() {
+    print('Hello World!');
 }
 
 function setSkip(client, value) {

@@ -7,6 +7,15 @@ or maybe
 
 kpackagetool5 -t kwinscript -i .
 * Updating a script
+* TODO Steps to us kotlin.js
+- [ ] Try to generate a single-file script (with gradle)
+  - [ ] external definitions of kwin objects
+  - [ ] adapt gradle assemble step
+- [ ] See what happens with multi-module projects.. probably it breaks single
+  file compilation.
+- [ ] Convert to a "declarativescript" (see kwin-tiling project sources) and see
+  if Qt.import is dirty enough to import multiple modules
+- [ ] Try to extends kotlins packaging (there are already several modes)
 * TODO Issues [0/4]
 - [ ] plasmapkg2/kpackagetoo5 behave inconsistently: try to install/uninstall
   and you will see
