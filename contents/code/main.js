@@ -1,5 +1,5 @@
 function isHidden(client) {
-    return client.minimized;
+    return client.minimized || (!client.active);
 }
 
 function hide(client) {
