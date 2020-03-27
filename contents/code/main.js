@@ -15,10 +15,6 @@ function show(client) {
     client.keepAbove       = false;
 }
 
-function sayHello() {
-    print('Hello World!');
-}
-
 function setSkip(client, value) {
     client.skipSwitcher  = value;
     client.skipPager     = value;
