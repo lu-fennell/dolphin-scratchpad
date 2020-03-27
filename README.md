@@ -9,7 +9,7 @@ Currently its little more than an adaption of
 
 
 
-#Installing#
+# Installing
 
 1. in the root of the repo: plasmapkg --type kwinscript -i .
 1. Settings, Window Behavior, KWin Scripts. Ensure "Dolphin-Scratchpad" is enabled.
