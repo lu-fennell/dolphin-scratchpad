@@ -61,7 +61,9 @@ function toggler(target) {
 }
 
 var dolphin = new TargetClient('dolphin-scratchpad');
+var konsole = new TargetClient('konsole-scratchpad');
 
 
 // Register keyboard shortcut
 registerShortcut("ToggleDolphin", "Toggle Dolphin", "Meta-F2", toggler(dolphin));
+registerShortcut("ToggleKonsole", "Toggle Konsole", "Meta-Return", toggler(konsole));

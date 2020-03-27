@@ -1,24 +1,15 @@
 * Running debug console
 qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.showInteractiveKWinConsole
 * Installing script
-plasmapkg2 -t kwinscript -i . 
-
-or maybe 
-
-kpackagetool5 -t kwinscript -i .
+~kpackagetool5 -i .~
 * Updating a script
-* TODO Steps to us kotlin.js
-- [ ] Try to generate a single-file script (with gradle)
-  - [ ] external definitions of kwin objects
-  - [ ] adapt gradle assemble step
-- [ ] See what happens with multi-module projects.. probably it breaks single
-  file compilation.
-- [ ] Convert to a "declarativescript" (see kwin-tiling project sources) and see
-  if Qt.import is dirty enough to import multiple modules
-- [ ] Try to extends kotlins packaging (there are already several modes)
-* TODO Issues [0/4]
-- [ ] plasmapkg2/kpackagetoo5 behave inconsistently: try to install/uninstall
-  and you will see
+~kpackagetool5 -u .~
+* TODO Issues [1/6]
+- [X] +plasmapkg2/kpackagetoo5 behave inconsistently: try to install/uninstall
+  and you will see+ kpackagetool5 seems the way to go.
 - [ ] the kde knowledge base gives the wrong debug console command
 - [ ] console is undocumented
 - [ ] console is awkward to use... how to reload? import files?
+- [ ] The applications to toggle should be configurable
+- [ ] The script should start the applications if they do not run (not clear how
+  to do that in a kwinscript)
